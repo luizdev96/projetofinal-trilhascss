@@ -40,7 +40,7 @@ Você pode redimensionar o navegador ou testar em diferentes dispositivos para v
 
 ## 📸 Prévia
 
-![HBO Max Clone Preview](https://via.placeholder.com/1200x600?text=Preview+do+Clone+HBO+Max)
+![HBO Max Clone Preview](https://projetofinal-trilhascss.vercel.app/)
 
 ---
 
