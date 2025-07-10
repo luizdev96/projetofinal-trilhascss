@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+  --primary-color: #020228;
+  --secondary-color: #ff00e5;
+  --tertiary-color: #b535f6;
+  --btn-bg-color-gradient: linear-gradient(
+    45deg,
+    #9b34ef 0%,
+    #490cb0 20%,
+    transparent 50%
+  );
+  --btn-link-bg-color: #fff;
+  --btn-link-color: #000;
+  --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+  --divider-bg-color: linear-gradient(
+    90deg,
+    #5516ba,
+    rgba(255, 0, 229, 0.5) 80%
+  );
+  --nav-bg-color: rgba(0, 0, 0, 0.3);
+  --text-color: #fff;
+  --link-color: #9e86ff;
+  --form-bg-color: rgba(211, 211, 211, 0.06);
+  --form-field-bg-color: rgba(0, 0, 0, 0.2);
+  --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+  --form-field-placeholder: rgba(255, 255, 255, 0.7);
+  --form-field-error: rgb(255, 76, 76);
+
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* CABEÇALHO*/
+
+.header{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.header .logo{
+  width: 150px;
+  margin-left: 1rem;
+}
+
+.header .logo img{
+  max-width: 100%;
+}
+
+.header .user_info{margin-right: 1rem;}
+
+.header .user_info a{
+  padding: .5rem 1rem;
+  text-decoration: none;
+  color: var(--btn-link-bg-color);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.header .user_info a.btnSigin{
+  background-color: var(--tertiary-color);
+  border-radius: 1rem;
+  color: var(--text-color);
+  transition: background 1s ease;
+}
+
+.header .user_info a.btnSigin:hover{
+  background-color: var(--btn-link-bg-color);
+  color: var(--btn-link-color);
+}
+
+/*BANNER*/
+.banner{
+  width: 100%;
+  height: 550px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  animation: banner 60s linear infinite alternate;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient( 0deg,var(--primary-color) 0%,var(--primary-color) 30%,transparent 90%);
+  z-index: 2;
+}
+
+.content_banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  position: relative;
+}
+
+.content_banner .logos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.content_banner .logos img{
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 1rem;
+}
+
+.content_banner h1{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+.content_banner h2{
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.content_banner .boxAss{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.content_banner .boxAss samp{
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.content_banner .boxAss h1{
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.content_banner .boxAss h1 span{
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.content_banner .boxAss button{
+  background: var(--btn-bg-color-gradient);
+  outline: 3px solid transparent;
+  border: 0;
+  background-size: 250%;
+  color: var(--text-color);
+  padding: .8rem 1rem;
+  border-radius: 500px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 1rem;
+  animation: wiggle 2.2s linear infinite;
+  transition: background 2s ease;
+  cursor: pointer;
+}
+
+.content_banner .boxAss button:hover{
+  animation: wiggle step-end;
+  color: var(--link-color);
+}
+
+.content_banner .boxAss span{
+  font-size: .8rem;
+  color: var(--text-color);
+  margin-top: 1.7rem;
+}
+
+
+@keyframes wiggle  {
+  0%, 10% {
+      transform: rotate(0);
+  }
+  15% {
+      transform: rotate(-15deg);
+  }
+  20% {
+      transform: rotate(10deg);
+  }
+  25% {
+      transform: rotate(-10deg);
+  }
+  30% {
+      transform: rotate(10deg);
+  }
+  35% {
+      transform: rotate(-10deg);
+  }
+  40%, 100% {
+      transform: rotate(0);
+  }
+
+}
+
+@keyframes banner {
+  0%{
+    background-image: url('../images/banner.avif');
+    background-position: center;
+    background-size: cover;
+  }
+
+  25%{
+      background-image: url('../images/banner2.avif');
+      background-position: center;
+      background-size: cover;
+  }
+
+  50%{
+    background-image: url('../images/banner3.avif');
+    background-position: center;
+    background-size: cover;
+  }
+
+  75%{
+      background-image: url('../images/banner4.avif');
+      background-position: center;
+      background-size: cover;
+  }
+
+  100%{
+    background-image: url('../images/banner5.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width:480px){
+  body{background-color: lemonchiffon;}
+
+  .header{ flex-direction: column;}
+
+  .logo{margin-bottom: 1rem; margin-top: 1rem;}
+
+  .user_info{
+    width: 100%;
+    display: block; 
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .user_info a{
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  .user_info a:last-child{margin-bottom: 0;}
+
+  .content_banner{ text-align: center;}
+  .content_banner .logos{ gap: 0px;}
+  .content_banner .logos img{ max-width: 30%; max-height: 30%;}
+  .content_banner h2{ font-size: 2rem; }
+  .content_banner h1{ font-size: 1rem;}
+}
