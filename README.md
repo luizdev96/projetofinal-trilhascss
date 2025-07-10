@@ -15,6 +15,9 @@ O principal objetivo deste projeto foi:
 
 ---
 
+![Screenshot do Projeto](https://github.com/luizdev96/projetofinal-trilhascss/blob/main/assets/images/thumb.png?raw=true)
+
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5** — estrutura da página
